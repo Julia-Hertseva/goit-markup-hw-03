@@ -9,16 +9,21 @@
   --header-bg-color: #2f303a;
 }
 .container {
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
-  outline: 2px solid red;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 body {
   font-family: var(--text-font);
   color: var(--main-text-color);
   letter-spacing: 0.03em;
+}
+
+img {
+  display: block;
 }
 
 .address,
@@ -73,6 +78,46 @@ footer {
 
 /* ========== HEADER ========== */
 
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  border-bottom: 1px solid #ececec;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-list {
+  display: flex;
+}
+
+.address-link {
+  display: flex;
+}
+
+.address-link-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.address {
+  margin-left: auto;
+}
+
+.logotype {
+  margin-right: 93px;
+}
+
+.navigation-list-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .navigation-list-link {
   font-weight: 500;
   font-size: 14px;
@@ -107,29 +152,40 @@ footer {
 
 /* ========== HERO ========== */
 .hero {
+  height: 597px;
   text-align: center;
 }
 
 .hero-title {
   margin-top: 0;
   margin-bottom: 30px;
+  width: 696px;
+  /* height: 120px; */
+  padding-top: 200px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.364;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
-  background-color: red;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .service-btn {
   display: inline-block;
+  min-width: 200px;
+  height: 50px;
+  padding: 10px 32px;
+  margin-bottom: 200px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.06em;
   background-color: var(--accent-color);
   color: #ffffff;
+  border: none;
 }
 
 .service-btn:hover,
@@ -141,11 +197,20 @@ footer {
 
 /* ========== ADVANTAGES ========== */
 
-.advantages-list {
-  margin-top: 94px;
-  margin-bottom: 94px;
+.advantages {
+  /* display: block; */
+  height: 289px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
+.advantages-list {
+  display: flex;
+}
+
+.advantages-list-item {
+  width: 270px;
+}
 .advantages-list-name {
   margin-top: 0;
   margin-bottom: 10px;
@@ -158,8 +223,9 @@ footer {
 }
 
 .advantages-list-description {
+  height: 75px;
   margin-top: 0;
-  margin-bottom: 94px;
+  margin-bottom: 0;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.714;
@@ -169,6 +235,11 @@ footer {
 /* ========== END ADVANTAGES ========== */
 
 /* ========== DOING ========== */
+
+.doing {
+  height: 490px;
+  padding-bottom: 94px;
+}
 
 .title-doing {
   margin-top: 0;
@@ -181,15 +252,29 @@ footer {
 }
 
 .doing-list {
-  margin-top: 0;
-  margin-bottom: 94px;
+  display: flex;
+}
+
+.doing-list {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.doing-list-item {
+  margin-left: 15px;
+  margin-right: 15px;
 }
 /* ========== END DOING ========== */
 
 /* ========== TEAM ========== */
 
+.team {
+  height: 648px;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .team-title {
-  margin-top: 94px;
   margin-bottom: 50px;
   color: var(--title-text-color);
   font-weight: 700;
@@ -199,8 +284,18 @@ footer {
 }
 
 .team-list {
+  display: flex;
   margin-top: 0;
-  margin-bottom: 94px;
+  margin-bottom: 0;
+}
+
+.team-list-item {
+  width: 270px;
+  height: 368px;
+}
+
+.team-list-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .team-name {
@@ -208,19 +303,43 @@ footer {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.188;
-  /* text-align: center; */
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .team-position {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.188;
-  /* text-align: center; */
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 /* ========== END TEAM ========== */
 
 /* ========== FOOTER ========== */
+
+footer {
+  height: 252px;
+}
+.container.footer {
+  display: block;
+  vertical-align: middle;
+  padding-top: 60px;
+}
+.footer-logo {
+  width: 145px;
+  height: 31px;
+}
+
+.footer-address-list {
+  width: 231px;
+  height: 81px;
+  margin-right: 0;
+  margin-top: 20px;
+}
 
 .footer-address-link {
   font-weight: 400;
@@ -258,6 +377,27 @@ footer {
 /* ========== END PORTFOLIO BUTTON ========== */
 
 /* ========== CARDS ========== */
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards-list {
+  /* width: calc((100%-60px) / 3); */
+  width: 370px;
+  height: 404px;
+  border: 1px solid #eeeeee;
+  margin-right: 30px;
+}
+
+.cards-list:nth-child(3n) {
+  margin-right: 0;
+}
+
+.cards-list:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
 
 .title-card {
   font-weight: 700;
